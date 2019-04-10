@@ -9,8 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const countries = new Countries();
   countries.bindEvents();
 
-  countriesSelector = document.querySelector('#countries')
-  const countriesList = new CountriesList(countriesSelector);
+  const searchDiv = document.querySelector('#search-div')
+  const searchBar = document.querySelector('#search-bar')
+  const searchDropdown = document.querySelector('#dropdown')
+
+  const countriesList = new CountriesList(searchDiv, searchBar, searchDropdown);
   countriesList.bindEvents();
 
   countryDiv = document.querySelector('#country');
